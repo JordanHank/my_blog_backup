@@ -6,22 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="">
-  <title>重载和重写的区别解析 | Jordan Zhang随记</title>
+  <title>Tag: basic | Jordan Zhang随记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="java三大特性：封装、继承和多态。而多态就是通过重载和重写实现的，所以理解重载和重写的区别，更有利于对java多态的应用。 重载Overloading重载是编译发生的多态性，同一个类中如果有多个同名方法，而返回类型或者参数列表不同叫做重载。在类编译加载时是通过参数列表的不同区分同名方法的，所以重载方法的参数列表必须不同，可以是参数个数不同，也可以是参数类型不同，返回值可以相同也可以不同，并不能以">
-<meta name="keywords" content="java,Overriding,Overloading">
-<meta property="og:type" content="article">
-<meta property="og:title" content="重载和重写的区别解析">
-<meta property="og:url" content="/2018/10/12/重载和重写的区别解析/index.html">
+  <meta name="description" content="伪全栈开发程序猿，自我学习，记录！">
+<meta name="keywords" content="java后端，伪全栈，程序猿，HSF, Dubbo, Spring MVC, vue, js, css, H5">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jordan Zhang随记">
+<meta property="og:url" content="/tags/basic/index.html">
 <meta property="og:site_name" content="Jordan Zhang随记">
-<meta property="og:description" content="java三大特性：封装、继承和多态。而多态就是通过重载和重写实现的，所以理解重载和重写的区别，更有利于对java多态的应用。 重载Overloading重载是编译发生的多态性，同一个类中如果有多个同名方法，而返回类型或者参数列表不同叫做重载。在类编译加载时是通过参数列表的不同区分同名方法的，所以重载方法的参数列表必须不同，可以是参数个数不同，也可以是参数类型不同，返回值可以相同也可以不同，并不能以">
+<meta property="og:description" content="伪全栈开发程序猿，自我学习，记录！">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="/assets/img/overrideResult.png">
-<meta property="og:updated_time" content="2018-10-12T15:39:42.284Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重载和重写的区别解析">
-<meta name="twitter:description" content="java三大特性：封装、继承和多态。而多态就是通过重载和重写实现的，所以理解重载和重写的区别，更有利于对java多态的应用。 重载Overloading重载是编译发生的多态性，同一个类中如果有多个同名方法，而返回类型或者参数列表不同叫做重载。在类编译加载时是通过参数列表的不同区分同名方法的，所以重载方法的参数列表必须不同，可以是参数个数不同，也可以是参数类型不同，返回值可以相同也可以不同，并不能以">
-<meta name="twitter:image" content="/assets/img/overrideResult.png">
+<meta name="twitter:title" content="Jordan Zhang随记">
+<meta name="twitter:description" content="伪全栈开发程序猿，自我学习，记录！">
   
     <link rel="alternative" href="/atom.xml" title="Jordan Zhang随记" type="application/atom+xml">
   
@@ -151,284 +148,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-重载和重写的区别解析" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      重载和重写的区别解析
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/10/15/markdown基本语法/" class="archive-article-date">
+  	<time datetime="2018-10-15T07:00:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-15</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/10/15/markdown基本语法/">markdown基本语法</a>
     </h1>
   
 
-        
-        <a href="/2018/10/12/重载和重写的区别解析/" class="archive-article-date">
-  	<time datetime="2018-10-12T14:05:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-12</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-      <span class="btn-bg"></span>
-      <span class="btn-text">文章导航</span>
-    </p>
-    <div id="toc-article" class="toc-article">
-      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-      <strong class="toc-title">文章目录</strong>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#重载Overloading"><span class="toc-number">1.</span> <span class="toc-text">重载Overloading</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重写Overriding"><span class="toc-number">2.</span> <span class="toc-text">重写Overriding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#区别与联系"><span class="toc-number">3.</span> <span class="toc-text">区别与联系</span></a></li></ol>
-    </div>
-    <script type="text/javascript">
-      function showToc(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:block");
-        show_toc_btn.setAttribute("style","display:none");
-      };
-      function showBtn(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:none");
-        show_toc_btn.setAttribute("style","display:block");
-      };
-    </script>
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>java三大特性：封装、继承和多态。而多态就是通过重载和重写实现的，所以理解重载和重写的区别，更有利于对java多态的应用。</p>
-<h3 id="重载Overloading"><a href="#重载Overloading" class="headerlink" title="重载Overloading"></a>重载Overloading</h3><p>重载是编译发生的多态性，同一个类中如果有多个同名方法，而返回类型或者参数列表不同叫做重载。在类编译加载时是通过参数列表的不同区分同名方法的，所以重载方法的参数列表必须不同，可以是参数个数不同，也可以是参数类型不同，返回值可以相同也可以不同，并不能以返回值的不同作为重载的判断标准。重载常用的地方是构造函数。</p>
- <a id="more"></a>
-<p>重载的规则：</p>
-<ul>
-<li>同名方法必须参数列表不同（参数个数不同或者参数类型不同）</li>
-<li>同名的方法可以返回值相同，也可以返回值不同</li>
-<li>同名的方法的访问修饰符可以改变</li>
-<li>同名方法可以抛出不同异常，但只能抛出重载方法抛出异常的同类或者父类</li>
-<li>方法能够在同一个类中或者在一个子类中被重载。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Overloading</span>  </span>&#123;</span><br><span class="line"> </span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(String a)</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">         </span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     <span class="function"><span class="keyword">public</span> String <span class="title">test</span><span class="params">(String a, <span class="keyword">int</span> b)</span> <span class="keyword">throws</span> NullPointerException </span>&#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"> </span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="重写Overriding"><a href="#重写Overriding" class="headerlink" title="重写Overriding"></a>重写Overriding</h3><p>方法重写又叫做方法覆盖，运行时的多态，子类具有父类完全相同的方法（方法名、参数列表和返回值都相同）但却有不同的表现这种多态就是重写。类对象创建时会将对象信息保存到方法表中，表中记录了类定义的方法的指针，每个表项指向了具体的方法执行代码，所以子类对象实例调用重写方法时会查找到对应的方法，而不会调用父类的同名方法这就是动态绑定机制，也就是重写的实现原理。</p>
-<p>重写的规则：</p>
-<ul>
-<li>重写方法名必须相同</li>
-<li>参数列表必须完全相同，包括个数以及参数类型和参数顺序</li>
-<li>返回类型必须兼容</li>
-<li>重写方法可以改变访问权限，但访问权限只能大不能小：父类方法为protect  子类重写方法不能为private  只能为public</li>
-<li>被关键字final、static修饰的方法不能被重写</li>
-<li>子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为private和final的方法。</li>
-<li>子类和父类不在同一个包中，那么子类只能够重写父类的声明为public和protected的非final方法。</li>
-<li>重写方法不能抛出新的强制性异常，可以不抛出异常或者少抛出异常</li>
-<li>构造方法不能被重写</li>
-</ul>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">test</span> &#123;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params">String [] args</span>) </span>&#123;</span><br><span class="line">     <span class="comment">//向上造型</span></span><br><span class="line">     Parent son = <span class="keyword">new</span> Child();</span><br><span class="line">     <span class="comment">//son.dance()  静态绑定创建时Parent类型中没有dance方法所以编译不过</span></span><br><span class="line"></span><br><span class="line">     son.sing();</span><br><span class="line">     System.<span class="keyword">out</span>.println(<span class="string">"============"</span>);</span><br><span class="line">     son.run();</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Parent</span> &#123;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">sing</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     System.<span class="keyword">out</span>.println(<span class="string">"唱张学有的歌..."</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     System.<span class="keyword">out</span>.println(<span class="string">"Parent Run..."</span>);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Child</span> <span class="title">extends</span> <span class="title">Parent</span>&#123;</span><br><span class="line"></span><br><span class="line"> @Override</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sing</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="comment">//可以通过关键字super调用父类的方法</span></span><br><span class="line">     super.sing();</span><br><span class="line">     System.<span class="keyword">out</span>.println(<span class="string">"也唱周杰伦的歌..."</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> @Override</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     System.<span class="keyword">out</span>.println(<span class="string">"Child Run..."</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dance</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     System.<span class="keyword">out</span>.println(<span class="string">"儿子会跳舞..."</span>);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 代码执行结果：<br> <img src="/assets/img/overrideResult.png" alt="重写代码结果"></p>
-<h3 id="区别与联系"><a href="#区别与联系" class="headerlink" title="区别与联系"></a>区别与联系</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">区别</th>
-<th style="text-align:left">重载Overloading</th>
-<th style="text-align:left">重写Overriding</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">方法名</td>
-<td style="text-align:left">必须相同</td>
-<td style="text-align:left">必须相同</td>
-</tr>
-<tr>
-<td style="text-align:left">参数列表</td>
-<td style="text-align:left">必须不同（个数或者类型不同）</td>
-<td style="text-align:left">必须相同</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:left">可以不同</td>
-<td style="text-align:left">可以不同，但必须兼容</td>
-</tr>
-<tr>
-<td style="text-align:left">异常</td>
-<td style="text-align:left">只能大不能小，只能多不能少</td>
-<td style="text-align:left">只能小不能大，只能少不能多</td>
-</tr>
-<tr>
-<td style="text-align:left">访问权限</td>
-<td style="text-align:left">可以修改</td>
-<td style="text-align:left">不能变的更小</td>
-</tr>
-</tbody>
-</table>
-<p> 方法的重载和重写都是实现多态的方式，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的参数列表，有兼容的返回类型，比父类被重写方法更好访问，不能比父类被重写方法声明更多的异常（里氏代换原则）。重载对返回类型没有特殊的要求，不能根据返回类型进行区分。</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢大佬支持！<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/ali.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Overriding</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Overloading</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">basic</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:/2018/10/12/重载和重写的区别解析/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/10/15/markdown基本语法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          markdown基本语法
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/10/11/java类的创建过程解析/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java类的创建过程解析</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    </div></section>
   
 
-  
-
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -465,9 +242,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
