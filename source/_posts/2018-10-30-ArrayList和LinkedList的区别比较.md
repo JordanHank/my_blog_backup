@@ -1,8 +1,10 @@
 ---
 title: ArrayList和LinkedList的区别比较
 date: 2018-10-30 22:46:27
+categories: blog
 toc: true
 tags:
+    - java
     - 集合
     - ArrayList
     - LinkedList

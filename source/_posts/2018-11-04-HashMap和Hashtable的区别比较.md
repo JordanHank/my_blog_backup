@@ -1,8 +1,10 @@
 ---
 title: HashMap和Hashtable的区别比较
 date: 2018-11-04 20:37:05
+categories: blog
 toc: true
 tags:
+    - java
     - 集合
     - HashMap
     - Hashtable

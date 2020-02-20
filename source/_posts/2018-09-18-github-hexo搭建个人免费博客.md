@@ -1,10 +1,10 @@
 ---
 title: github+hexo搭建个人免费博客
 date: 2018-09-18 14:04:43
+categories: blog
 toc: true
 tags:
   - hexo
-  - blog
   - github
 ---
 github作为全球最大的开源软件交流平台，除了能够在这里学习、交流、研究IT各个领域的最新技术与成果以外，其实还可以使用github pages服务搭建属于自己的个人免费博客。
