@@ -2,119 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85b38eab-0bbe-4d9b-b6a9-3eb57975239e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/.babelrc" afterPath="$PROJECT_DIR$/themes/yilia_bak/.babelrc" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/.editorconfig" afterPath="$PROJECT_DIR$/themes/yilia_bak/.editorconfig" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/.eslintignore" afterPath="$PROJECT_DIR$/themes/yilia_bak/.eslintignore" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/.eslintrc.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/.eslintrc.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/.gitattributes" afterPath="$PROJECT_DIR$/themes/yilia_bak/.gitattributes" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/.gitignore" afterPath="$PROJECT_DIR$/themes/yilia_bak/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/README.md" afterPath="$PROJECT_DIR$/themes/yilia_bak/README.md" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/languages/default.yml" afterPath="$PROJECT_DIR$/themes/yilia_bak/languages/default.yml" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/languages/fr.yml" afterPath="$PROJECT_DIR$/themes/yilia_bak/languages/fr.yml" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/languages/nl.yml" afterPath="$PROJECT_DIR$/themes/yilia_bak/languages/nl.yml" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/languages/no.yml" afterPath="$PROJECT_DIR$/themes/yilia_bak/languages/no.yml" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/languages/ru.yml" afterPath="$PROJECT_DIR$/themes/yilia_bak/languages/ru.yml" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/languages/zh-CN.yml" afterPath="$PROJECT_DIR$/themes/yilia_bak/languages/zh-CN.yml" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/languages/zh-tw.yml" afterPath="$PROJECT_DIR$/themes/yilia_bak/languages/zh-tw.yml" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/after-footer.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/after-footer.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/archive-post.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/archive-post.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/archive.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/archive.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/aside.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/aside.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/baidu-analytics.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/baidu-analytics.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/google-analytics.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/google-analytics.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/head.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/head.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/header.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/header.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/left-col.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/left-col.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/mathjax.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/mathjax.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/mobile-nav.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/mobile-nav.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/category.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/category.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/changyan.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/changyan.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/date.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/date.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/duoshuo.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/duoshuo.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/gitment.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/gitment.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/nav.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/nav.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/share.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/share.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/tag.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/tag.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/title.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/title.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/wangyiyun.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/post/wangyiyun.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/tools.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/tools.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/viewer.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/_partial/viewer.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/layout/index.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/layout/index.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/package.json" afterPath="$PROJECT_DIR$/themes/yilia_bak/package.json" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/_core.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/_core.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/_function.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/_function.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/archive.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/archive.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/article-inner.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/article-inner.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/article-main.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/article-main.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/article-nav.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/article-nav.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/aside.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/aside.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/comment.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/comment.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/core/_animation.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/core/_animation.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/core/_media-queries.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/core/_media-queries.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/core/_mixin.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/core/_mixin.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/core/_reset.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/core/_reset.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/core/_variables.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/core/_variables.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/fonts.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/fonts.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/fonts/iconfont.svg" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/fonts/iconfont.svg" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/footer.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/footer.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/grid.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/grid.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/highlight.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/highlight.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/img/tooltip.svg" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/img/tooltip.svg" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/left.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/left.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/main.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/main.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/mobile-slider.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/mobile-slider.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/mobile.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/mobile.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/page.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/page.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/reward.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/reward.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/scroll.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/scroll.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/share.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/share.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/social.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/social.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/tags-cloud.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/tags-cloud.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/tags.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/tags.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/tools.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/tools.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/tooltip.scss" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/css/tooltip.scss" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/Q.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/Q.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/anm.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/anm.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/aside.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/aside.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/browser.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/browser.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/fix.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/fix.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/main.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/mobile.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/mobile.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/report.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/report.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/share.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/share.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/slider.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/slider.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/util.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/util.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/viewer.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/js/viewer.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source-src/script.ejs" afterPath="$PROJECT_DIR$/themes/yilia_bak/source-src/script.ejs" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source/fonts/iconfont.45d7ee.svg" afterPath="$PROJECT_DIR$/themes/yilia_bak/source/fonts/iconfont.45d7ee.svg" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source/fonts/tooltip.4004ff.svg" afterPath="$PROJECT_DIR$/themes/yilia_bak/source/fonts/tooltip.4004ff.svg" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source/main.0cf68a.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source/main.0cf68a.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source/mobile.992cbe.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source/mobile.992cbe.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/source/slider.e37972.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/source/slider.e37972.js" />
-      <change beforePath="$PROJECT_DIR$/themes/yilia_bak/webpack.config.js" afterPath="$PROJECT_DIR$/themes/yilia_bak/webpack.config.js" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/2020-02-17-IE内存泄漏问题排查思路.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path=".idea/inspectionProfiles/Project_Default.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CNAME">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="15" selection-start-column="15" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/2018-10-15-markdown基本语法.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1770">
+                <caret line="118" selection-start-line="118" selection-end-line="118" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/2020-02-17-IE内存泄漏问题排查思路.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="60">
+                <caret line="215" column="5" selection-start-line="215" selection-start-column="5" selection-end-line="215" selection-end-column="5" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/yilia/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1489">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-735">
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="35" />
@@ -124,38 +86,53 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="myBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="my_blog_backup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_blog_backup" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="myBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="my_blog_backup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_blog_backup" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_blog_backup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_blog_backup" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_blog_backup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_blog_backup" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_blog_backup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_blog_backup" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_blog_backup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_blog_backup" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -173,9 +150,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -196,46 +170,63 @@
       <option name="project" value="LOCAL" />
       <updated>1545062948086</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="梳理博客项目结构">
+      <created>1582209668210</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582209668210</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177000" />
+    <option name="totallyTimeSpent" value="307000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="45" y="23" width="1635" height="1027" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17514125" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.51657754" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="yilia主题同步" />
-    <option name="LAST_COMMIT_MESSAGE" value="yilia主题同步" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
+    <MESSAGE value="梳理博客项目结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="梳理博客项目结构" />
   </component>
 </project>
