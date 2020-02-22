@@ -10,11 +10,9 @@ function getQueryString(name) {
 // 统计用，开发者不需要理会
 if (window.BJ_REPORT) {
 	BJ_REPORT.init({
-  		id: 1
 	});
 	BJ_REPORT.init({
-		id: 1,                                
-		uin: window.location.origin,          
+		uin: window.location.origin,
 		combo: 0,                             
 		delay: 1000,                          
 		url: "//litten.me:9005/badjs/",       
