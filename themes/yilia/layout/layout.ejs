@@ -1,6 +1,9 @@
 <%- partial('_partial/head') %>
 <body>
   <div id="container" q-class="show:isCtnShow">
+  <a href="https://github.com/JordanHank" style="position: fixed; z-index: 9999; right: 0">
+  <img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149"
+  class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow" id="left-about-me">
       <img style="width:40px;height: 30px;" class="close-icon" src="<%- theme.closeIcon %>">
@@ -25,9 +28,9 @@
     <%- partial('_partial/viewer') %>
   </div>
   <!-- 《页面点击小红心 -->
-  <% if (theme.love){ %>
-      <script type="text/javascript" src="./love.js"></script>
-  <% } %>
-  <!-- 页面点击小红心》 -->
+    <% if (theme.love){ %>
+        <script type="text/javascript" src="/./love.js"></script>
+    <% } %>
+    <!-- 页面点击小红心》 -->
 </body>
 </html>
