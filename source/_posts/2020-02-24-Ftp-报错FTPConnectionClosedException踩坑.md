@@ -36,9 +36,9 @@ Caused by: org.apache.commons.net.ftp.FTPConnectionClosedException: Connection c
 
 #### 分析问题
 
-通过百度可以知道这个问题是FtpClient 获取的链接过早或者被意外关闭的时候抛出IOException，被FtpClient 捕获后抛出的异常。至于为什么链接好端端的会被断开，主要是有下面的集中可能原因：
+通过百度可以知道这个问题是FtpClient 获取的连接过早或者被意外关闭的时候抛出IOException，被FtpClient 捕获后抛出的异常。至于为什么连接好端端的会被断开，主要是有下面的几种可能原因：
 
-1.Ftp 服务器链接数已满或者发生了异常导致客户端无法正常获取到链接，这种时候往往Ftp 抛出的异常信息中会包含421错误，类似下面这种：
+1.Ftp 服务器连接数已满或者发生了异常导致客户端无法正常获取到连接，这种时候往往Ftp 抛出的异常信息中会包含421错误，类似下面这种：
 
 ```text
 org.apache.commons.net.ftp.FTPConnectionClosedException: FTP response 421 received.  Server closed connection.
@@ -51,11 +51,11 @@ org.apache.commons.net.ftp.FTPConnectionClosedException: FTP response 421 receiv
 	at org.apache.commons.net.SocketClient.connect(SocketClient.java:202)
 ```
 
-通常高并发的访问Ftp 服务器的时候由于服务器的配置单个客户端的链接数设置的比较小的时候容易发生这种错误。
+通常高并发的访问Ftp 服务器的时候，由于服务器的单个客户端的连接数配置的比较小的时候容易发生这种错误。
 
 >目前使用场景属于这种情况，需要重点排查！
 
-2.FtpClient 客户端设置的超时时间太短，导致客户单链接被过早的抛弃。
+2.FtpClient 客户端设置的超时时间太短，导致客户端连接被过早的抛弃。
 
 ```java
 ftpClient.setDataTimeout(60000);       //设置传输超时时间为60秒 
@@ -64,7 +64,7 @@ ftpClient.setConnectTimeout(60000);       //连接超时为60秒
 
 >这个应该不是导致此次报错的原因，毕竟项目已经使用一段时间了，都是采用的工具类的形式，如果有问题之前就暴露了。
 
-3.获取FtpClient 之后在使用中有不正确的关闭链接的操作，导致链接被意外中断。Apache官网提供的使用FtpClient的代码：
+3.获取FtpClient 之后在使用中有不正确的关闭连接的操作，导致连接被意外中断。Apache官网提供的使用FtpClient的代码：
 
 ```java
 boolean error = false;  
@@ -102,7 +102,7 @@ try {
 
 **特别注意：** 关闭客户端的操作应该在finally 处理。
 
->此时使用的是公司封装的存储组件，案例说不会有这样的问题，但是有个点让我很在意所以还是需要排查一下！
+>此时使用的是公司封装的存储组件，按理说不会有这样的问题，但是有个点让我很在意所以还是需要排查一下！
 
 ```java
  public IFTPClient getClient() throws IOException {
@@ -125,7 +125,7 @@ try {
     }
 ```
 
-**在意点：** 获取链接后在异常里有一个关闭链接的操作，报错信息也是从closeFtpClient 抛出来的，但是真实错误由于被捕获了看不到，所以还需要确认下。
+**在意点：** 获取连接后在异常里有一个关闭连接的操作，报错信息也是从closeFtpClient 抛出来的，但是真实错误由于被捕获了看不到，所以还需要确认下。
 
 #### 尝试
 
@@ -223,11 +223,11 @@ systemctl reload vsftpd
 
 通过命令
 `netstat -na|grep 21|grep ESTABLISHED|awk '{print $5}'|awk -F: '{print $1}'|sort|uniq -c|sort -r`
-查看ftp 客户端连接情况，发现单个客户端的链接并不高，也就80-90的样子，所以配置的单个客户端的并发数100应该不会有问题才对（<span style="color: red">这里有疑问！</span>）。
+查看ftp 客户端连接情况，发现单个客户端的连接并不高，也就80-90的样子，所以配置的单个客户端的并发数100应该不会有问题才对（<span style="color: red">这里有疑问！</span>）。
 
 2.确认现场网络环境
 
-现场确认通过工具或者浏览器直接访问Ftp 服务，发现能够正常访问，可以确定网络环境应该是没什么问题的，但还是不放心是不是防火情的原因，所以又找现场确认了防火墙的情况，发现现场根本没有开防火墙，由此可以肯定Ftp 服务网络是没有问题的。
+现场确认通过工具或者浏览器直接访问Ftp 服务，发现能够正常访问，可以确定网络环境应该是没什么问题的，但还是不放心是不是防火墙的原因，所以又找现场确认了防火墙的情况，发现现场根本没有开防火墙，由此可以肯定Ftp 服务网络是没有问题的。
 
 Ftp 相关的命令：
 
@@ -249,7 +249,7 @@ man firewall-cmd                               ##查看帮助
 
 3.检查代码。
 
-通过抛出的问题的代码行数去追查了使用Ftp 的业务代码，经过调试发现业务逻辑是没有问题唯一在意的地方在于存储服务获取FtpClient 链接的地方，由于代码在jar 包里，没办法为了确认问题只有重写源码的方式再次调试，
+通过抛出的问题的代码行数去追查了使用Ftp 的业务代码，经过调试发现业务逻辑是没有问题唯一在意的地方在于存储服务获取FtpClient 连接的地方，由于代码在jar 包里，没办法为了确认问题只有重写源码的方式再次调试，
 经过调试发现最终抛出的异常是：
 
 ```java
@@ -260,7 +260,7 @@ org.apache.commons.net.ftp.FTPConnectionClosedException: FTP response 421 receiv
 	
 ```
 
-抛出的421 错误应该还是连接数满了导致的，所以基本肯定问题不在代码逻辑还是出在Ftp 服务器。
+抛出的421 错误应该还是由于连接数满了导致的，所以基本肯定问题不在代码逻辑还是出在Ftp 服务器。
 
 4.查看Ftp 服务的相关日志
 
@@ -283,18 +283,17 @@ Sat Feb 22 13:30:21 2020 [pid 2893] CONNECT: Client "151.15.1.50", "Connection r
 
 ```
 
-可以从日志里看到单个客户端并发链接Ftp 服务的时候疯狂的报`Connection refused: too many sessions for this address`错误，这里基本可以肯定还是Ftp 配置的问题。
+可以从日志里看到单个客户端并发连接Ftp 服务的时候疯狂的报`Connection refused: too many sessions for this address`错误，这里基本可以肯定还是Ftp 配置的问题。
 
 ### 处理问题
 
-既然已经确定问题出在Ftp 配置上，没有别的办法只有从配置上想办法，通过不停的修改配置文件发现一个奇怪的现象，通过命令`netstat -apn | grep ftp | wc -l`查看Ftp 链接数的情况的时候，发现报错的时候总是出现在连接数超过50的时候，这里让我产生了
-怀疑，众所周知Ftp 服务器的默认链接数就是50，难道我们一直修改的配置不对（这里一直是修改的用户配置），其实一直走的是默认配置嘛？
+既然已经确定问题出在Ftp 配置上，没有别的办法只有从配置上想办法，通过不停的修改配置文件发现一个奇怪的现象，通过命令`netstat -apn | grep ftp | wc -l`查看Ftp 连接数的情况的时候，发现报错的时候总是出现在连接数超过50的时候，这里让我产生了怀疑，众所周知Ftp 服务器的默认连接数就是50，难道一直修改的配置不对（这里一直是修改的用户配置），其实一直走的是默认配置嘛？
 
 通过命令`ps -ef | grep ftp`查看Ftp 的配置使用情况：
 
 ![Ftp 配置使用情况](/assets/img/ftpConfig.png)
 
-发现其实Ftp 服务器一直都是走的默认配置，修改了vsftpd.conf 的配置后发现问题解决了。
+发现确实Ftp 服务器一直都是走的默认配置，修改了vsftpd.conf 的配置后发现问题解决了。
 
 后来查询资料发现，vsftpd.conf 文档有如下说明：
 
@@ -312,11 +311,10 @@ banner_file, max_per_ip, max_clients, xferlog_file, etc.
 ```
 
 中文意思：
-这个选项允许基于每个用户重写任何配置选项。使用非常简单，最好阐述方法就是给出例子。如果你设置user_config_dir作为/etc/vsftpd_user_conf,然后登录的用户名为"chris"，那么vsftpd应用/etc/vsftpd_user_conf/chris配置文件这个文件格式就是本手册的阐述的，注意：并不是所有的设置都是基于用户的。例如，许多设置只能用户会话开始。
-例如一些设置不是基于用户的，例如listen_address, banner_file，max_per_ip, max_clients, xferlog_file等等。
+这个选项允许基于每个用户重写任何配置选项。使用非常简单，最好阐述方法就是给出例子。如果你设置user_config_dir作为/etc/vsftpd_user_conf,然后登录的用户名为"chris"，那么vsftpd应用/etc/vsftpd_user_conf/chris配置文件这个文件格式就是本手册的阐述的，注意：并不是所有的设置都是基于用户的。例如，许多设置只能用户会话开始。例如一些设置不是基于用户的，例如listen_address, banner_file，max_per_ip, max_clients, xferlog_file等等。
 
 
-所以在多用户配置的情况下有写配置在用户配置文件中修改并不生效，特别是这次问题的关键`max_per_ip, max_clients`，这里确实有点坑，如果不熟悉配置的使用要求的话根本不知道为什么在用户配置中做了设置缺不生效。
+所以在多用户配置的情况下有些配置在用户配置文件中修改并不生效，特别是这次问题的关键`max_per_ip, max_clients`，这里确实有点坑，如果不熟悉配置的使用要求的话根本不知道为什么在用户配置中做了设置却不生效。
 
 ### 总结
 
