@@ -27,7 +27,7 @@ ol .toc {
   font-size: 1em;
   position: fixed;
   right: 65px;
-  top: 120px;
+  top: 145px;
 }
 
 #toc ol {
@@ -62,7 +62,7 @@ ol .toc {
 /*目录icon*/
 #mulu {
   position: fixed;
-  top: 130px;
+  top: 155px;
   right: 80px;
   z-index: 99;
   cursor: pointer;
